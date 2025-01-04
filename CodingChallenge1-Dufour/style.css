@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --primary-color-orange: hsl(31, 77%, 52%);
+    --primary-color-cyan: hsl(184, 100%, 22%);
+    --primary-color-dark-cyan: hsl(179, 100%, 13%);
+    --grey: hsl(0, 0%, 100%, 0.75);
+    --white: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+    color: var(--white);
+    background-color: var(--grey);
+    padding: 20px;
+}
+
+h2 { 
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--white);
+    margin-bottom: 0.5rem; 
+    margin-top: 0.9rem;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.625;
+    color: var(--grey);
+    margin-bottom: 3rem;
+}
+
+.component {
+    display: grid;
+    grid-auto-rows: 1fr;
+    max-width: 1000px;
+}
+
+.component>div {
+    padding: 40px;
+}
+
+.sedans {
+    background-color: var(--primary-color-orange);
+    border-top-left-radius: 0.6rem; 
+    border-top-right-radius: 0.6rem;
+}
+
+.suvs{
+    background-color: var(--primary-color-cyan); 
+}
+
+.luxury {
+    background-color: var(--primary-color-dark-cyan);
+    border-bottom-left-radius: 0.6rem;
+        border-bottom-right-radius: 0.6rem;
+}
+
+button {
+    padding: 0.8rem 1rem;
+    font-family:'Lexend Deca', sans-serif;;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;    
+}
+
+.button-sedans {
+    color: var(--primary-color-orange);
+}
+
+.button-suvs {
+    color: var(--primary-color-cyan);
+}
+
+.button-luxury {
+    color: var(--primary-color-dark-cyan);
+}
+
+.button-sedans:hover {
+    background-color: var(--primary-color-orange);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.button-suvs:hover {
+    background-color: var(--primary-color-cyan);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.button-luxury:hover {
+    background-color: var(--primary-color-dark-cyan);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+@media (width > 650px) { 
+    .component {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .sedans {
+        border-radius: 0.6rem 0 0 0.6rem;
+    }
+    
+    .luxury {
+        border-radius: 0 0.6rem 0.6rem 0;
+    }
+}
+

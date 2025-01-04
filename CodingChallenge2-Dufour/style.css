@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --white: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    display: grid; 
+    min-height: 100vh; 
+    background-color: var(--violet);
+    color: var(--white);
+    background-image: url("images/bg-mobile.svg");
+    background-size: contain;
+    background-position: top;
+    padding: 40px;
+    background-repeat: no-repeat;
+}
+
+.register-box {
+    display: grid;
+    height: 100vh;
+}
+
+.logo img {
+    max-width: 200px; 
+    height: auto; 
+    margin-bottom: 2rem; 
+    margin-top: 1rem;    
+}
+
+.image img{
+    width: 100%;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; 
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.625;
+    margin-bottom: 20px;
+}
+
+.register-button {
+    padding: 1rem 4rem;
+    font-family:'Poppins', sans-serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 28px;  
+    color: var(--violet);  
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.register-button:hover {
+    background-color: var(--soft-magenta);
+    color: var(--white);
+}
+
+.social-buttons-container {
+    display: flex;
+    gap: 15px; 
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-button {
+    padding: 1rem 1.1rem;
+    border: 2px solid;
+    border-radius: 60px; 
+    color: var(--white); 
+    background-color: transparent;
+    font-size: 12px;
+}
+
+.social-button:hover {
+    color: var(--soft-magenta);
+    background-color: transparent;
+}
+
+@media (min-width: 600px) {
+
+    body {
+        display: grid; 
+        min-height: 100vh; 
+        background-color: var(--violet);
+        color: var(--white);
+        background-image: url("images/bg-desktop.svg");
+        background-size: cover;
+        background-position: center;
+        padding: 40px;
+        background-repeat: no-repeat;
+    }
+
+    .register-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        height: auto; 
+    }
+
+    .logo img {
+        max-width: 300px;    
+    }
+
+    .content {
+        padding: 0 40px 0 40px ;
+        text-align: left;
+    }
+
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600; 
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.625;
+        margin-bottom: 40px;
+    }
+
+    .social-buttons-container {
+        padding-right: 40px;
+        justify-content: flex-end; 
+        margin-top: 60px; 
+        height: 50px; 
+    }
+
+    .social-button {
+        font-size: 18px; 
+        padding: 1.1rem 1rem; 
+        flex: none; 
+        height: auto; 
+    }
+
+}
